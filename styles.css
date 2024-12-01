@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+}
+section {
+    position: relative;
+    height: 100vh;
+}
+header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; 
+    background-color: white; 
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+main {
+    padding-top: 4rem; 
+}
+
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.speaker__card h1 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.speaker__card h2 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+span {
+    font-size: 25px;
+    color: rgb(160, 45, 0);
+}
+
