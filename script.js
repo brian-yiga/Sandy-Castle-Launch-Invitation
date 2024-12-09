@@ -1,3 +1,10 @@
+const menuToggle = document.getElementById("menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+menuToggle.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
+
 const countdown = () => {
   const eventDate = new Date("2024-01-15T10:00:00").getTime();
   const now = new Date().getTime();
@@ -19,12 +26,6 @@ const countdown = () => {
     document.getElementById("countdown").innerHTML = "The event has started!";
   }
 };
+
 setInterval(countdown, 1000);
 countdown();
-
-const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
-
-menuToggle.addEventListener("click", () => {
-  mobileMenu.classList.toggle("hidden");
-});
