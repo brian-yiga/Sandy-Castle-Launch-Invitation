@@ -91,7 +91,7 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section
+    <section id="home"
       class="relative bg-cover bg-fixed h-screen flex flex-col items-center justify-center"
       style="background-image: url(./assets/background.jpg)"
     >
@@ -100,7 +100,7 @@
         <h1 class="text-green-600 text-3xl font-extrabold">
           WELCOME TO SANDY CASTLE PLAYGROUND
         </h1>
-        <p class="text-yellow-700 text-xl italic font-bold mb-10">
+        <p class="text-xl italic font-bold mb-10">
           "We Love and Care, They Flourish"
         </p>
       </div>
@@ -108,17 +108,21 @@
       <!-- Countdown -->
       <div
         id="countdowning"
-        class="text-3xl text-yellow-400 font-mono bg-gray-800 p-6 rounded-lg shadow-lg w-60 object-center"
+        class="text-2xl text-yellow-400 font-mono bg-gray-800 p-6 rounded-lg shadow-lg w-60 object-center flex flex-col items-center"
       >
+      <h2 id="countdown">COUNTDOWN</h2>
+      <div>
         <span id="days">00</span>:<span id="hours">00</span>:<span id="minutes"
           >00</span
         >:<span id="seconds">00</span>
       </div>
+      </div>
     </section>
 
     <!-- ABOUT US -->
-    <main class="flex flex-col items-center justify-center min-h-screen">
-      <h1 class="text-4xl text-yellow-500 font-bold mb-5">About Us</h1>
+    <main id="about"
+    class="flex flex-col items-center justify-center min-h-screen">
+      <h1 class="text-4xl text-yellow-500 font-bold mb-5 mt-5">About Us</h1>
       <article
         class="flex flex-col items-center justify-center md:flex-row w-4/5"
       >
@@ -148,14 +152,14 @@
     </main>
 
     <!-- SPEAKERS SECTION-->
-    <section
+    <section id="speakers"
       class="speakers flex flex-col items-center justify-center py-10 px-10 bg-fixed bg-cover"
       style="background-image: url(./assets/background3.jpg)"
     >
       <h1 class="text-4xl text-yellow-500 font-bold mb-5">SPEAKERS</h1>
-      <div class="speaker-container flex flex-col border gap-10 md:flex-row">
-        <div class="speaker__card bg-gray-300 flex flex-col">
-          <img src="./assets/profile1.jpg" alt="speaker-one" />
+      <div class="speaker-container flex flex-col gap-10 md:flex-row">
+        <div class="speaker__card bg-gray-300 flex flex-col shadow-lg rounded-lg">
+          <img src="./assets/profile1.jpg" alt="speaker-one" class="shadow-lg rounded-lg"/>
           <h1 class="text-2xl font-bold text-red-600 px-5 mt-5">
             SANDRINA LOUISE
           </h1>
@@ -166,8 +170,8 @@
           </p>
         </div>
 
-        <div class="speaker__card bg-gray-300 flex flex-col">
-          <img src="./assets/profile2.jpg" alt="speaker-two" />
+        <div class="speaker__card bg-gray-300 flex flex-col shadow-lg rounded-lg">
+          <img src="./assets/profile2.jpg" alt="speaker-two" class="shadow-lg rounded-lg"/>
           <h1 class="text-2xl font-bold text-red-600 px-5 mt-5">
             BRIAN MUWONGE
           </h1>
@@ -178,8 +182,8 @@
           </p>
         </div>
 
-        <div class="speaker__card bg-gray-300 flex flex-col">
-          <img src="./assets/profile3.jpg" alt="speaker-three" />
+        <div class="speaker__card bg-gray-300 flex flex-col shadow-lg rounded-lg">
+          <img src="./assets/profile3.jpg" alt="speaker-three" class="shadow-lg rounded-lg"/>
           <h1 class="text-2xl font-bold text-red-600 px-5 mt-5">
             JOHN KISSINGER
           </h1>
@@ -195,9 +199,9 @@
     <!-- SCHEDULE AND RSVP -->
     <div class="flex items-center justify-center min-h-screen">
       <section
-        class="schedule-rsvp flex flex-col gap-20 w-4/5 items-center justify-center bg-gray-100 py-20 rounded-lg md:flex-row"
+        class="schedule-rsvp flex flex-col gap-20 w-11/12 items-center justify-center bg-gray-100 py-20 rounded-lg md:flex-row"
       >
-        <div class="schedule leading-loose">
+        <div id="schedule" class="schedule leading-loose pl-6">
           <h2 class="text-4xl text-yellow-500 font-bold mb-2">Program</h2>
           <div class="morning-program">
             <h3 class="font-bold">Morning Session</h3>
@@ -212,20 +216,20 @@
             <h3 class="font-bold">Afternoon Session</h3>
             <ol>
               <li><strong>1:00 PM</strong> - Keynote Presentation</li>
-              <li><strong>2:00 PM</strong> - Interactive Workshops</li>
+              <li><strong>2:00 PM</strong> - Interactive Meets</li>
               <li><strong>3:30 PM</strong> - Closing Ceremony</li>
             </ol>
           </div>
         </div>
 
-        <div class="rsvp">
+        <div id="rsvp" class="rsvp py-2 md:pr-6">
           <div class="rsvp-title">
             <h1 class="text-4xl text-yellow-500 font-bold mb-2">RSVP</h1>
             <p class="text-1xl mb-5">
               Confirm Your Attendance By Filling in this Form
             </p>
           </div>
-          <div class="rsvp-form bg-grey-300 rounded-lg bg-white py-5">
+          <div class="rsvp-form bg-grey-300 rounded-lg bg-white py-5 px-5">
             <form>
               <div class="rsvp-name">
                 <label for="name" class="font-bold">Your Name</label>
@@ -233,7 +237,7 @@
                   type="text"
                   id="name"
                   required
-                  class="border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-5 w-full"
+                  class="border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-5 w-full pl-2"
                   placeholder="Enter your full name"
                 />
               </div>
@@ -243,7 +247,7 @@
                   type="email "
                   id="email"
                   required
-                  class="border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-5 w-full"
+                  class="border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-5 w-full pl-2"
                   placeholder="Enter your Email"
                 />
               </div>
@@ -253,12 +257,12 @@
                   type="number "
                   id="guests"
                   required
-                  class="border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-5 w-full"
+                  class="border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-5 w-full pl-2"
                   placeholder="Number of Guests"
                 />
               </div>
               <button
-                class="rsvp-button text-2xl bg-red-700 text-white px-3 rounded-md hover:bg-green-700"
+                class="rsvp-button text-lg bg-red-700 text-white px-3 rounded-md hover:bg-green-700"
               >
                 RSVP
               </button>
