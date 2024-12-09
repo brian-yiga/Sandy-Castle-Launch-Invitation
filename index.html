@@ -19,42 +19,268 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <title>Sandy Castle Daycare</title>
+    <title>Sandy Castle</title>
   </head>
   <body>
-    <!-- Nav Bar -->
-    <header
-      class="fixed top-0 left-0 z-50 flex items-center justify-between px-8 py-2 bg-white shadow-md"
-    >
-      <img
-        src="./assets/sandy logo.jpg"
-        alt="School Logo"
-        class="w-20 h-20 mr-40"
-      />
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+      <nav class="flex items-center justify-between px-5 py-5">
+        <img
+          src="./assets/sandy logo1.png"
+          alt="Sandy Castle Daycare Logo"
+          class="w-16 h-20"
+        />
 
-      <nav class="hidden md:flex space-x-5 text-yellow-500">
-        <ul class="flex items-center space-x-5">
-          <li class="text-2xl hover:text-pink-900 hover:underline">
-            <a href="#home">HOME</a>
+        <!-- Hamburger Menu for Mobile -->
+        <button
+          id="menu-toggle"
+          class="block md:hidden text-yellow-500 focus:outline-none"
+        >
+          <svg
+            class="w-8 h-8"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+
+        <!-- Full Navigation for Desktop -->
+        <ul class="hidden md:flex space-x-8 text-yellow-500 text-lg">
+          <li><a href="#home" class="hover:text-pink-700">HOME</a></li>
+          <li><a href="#about" class="hover:text-pink-700">ABOUT</a></li>
+          <li><a href="#speakers" class="hover:text-pink-700">SPEAKERS</a></li>
+          <li><a href="#schedule" class="hover:text-pink-700">SCHEDULE</a></li>
+          <li>
+            <a
+              href="#rsvp"
+              class="bg-red-700 text-white py-2 px-4 rounded hover:bg-green-700"
+              >RSVP</a
+            >
           </li>
-          <li class="text-2xl hover:text-pink-900 hover:underline">
-            <a href="#about-us">ABOUT</a>
-          </li>
-          <li class="text-2xl hover:text-pink-900 hover:underline">
-            <a href="#speakers">SPEAKERS</a>
-          </li>
-          <li class="text-2xl hover:text-pink-900 hover:underline">
-            <a href="#schedule">SCHEDULE</a>
+        </ul>
+
+        <!-- Mobile Dropdown Menu -->
+        <ul
+          id="mobile-menu"
+          class="absolute top-full left-0 w-full bg-white shadow-md hidden flex-col text-yellow-500 text-lg space-y-2 px-5 py-4 md:hidden"
+        >
+          <li><a href="#home" class="hover:text-pink-700 block">HOME</a></li>
+          <li><a href="#about" class="hover:text-pink-700 block">ABOUT</a></li>
+          <li>
+            <a href="#speakers" class="hover:text-pink-700 block">SPEAKERS</a>
           </li>
           <li>
-            <button
-              class="text-xl bg-red-700 text-white py-3 px-3 rounded-md hover:bg-green-700"
+            <a href="#schedule" class="hover:text-pink-700 block">SCHEDULE</a>
+          </li>
+          <li>
+            <a
+              href="#rsvp"
+              class="bg-red-700 text-white py-2 px-4 rounded hover:bg-green-700 block text-center"
+              >RSVP</a
             >
-              <a href="#rsvp">RSVP</a>
-            </button>
           </li>
         </ul>
       </nav>
     </header>
+
+    <!-- HERO SECTION -->
+    <section
+      class="relative bg-cover bg-fixed h-screen flex flex-col items-center justify-center"
+      style="background-image: url(./assets/background.jpg)"
+    >
+      <img src="./assets/apply logo.png" alt="Apply Logo" class="w-96 h-96" />
+      <div class="hero-title flex flex-col items-center justify-center">
+        <h1 class="text-green-600 text-3xl font-extrabold">
+          WELCOME TO SANDY CASTLE PLAYGROUND
+        </h1>
+        <p class="text-yellow-700 text-xl italic font-bold mb-10">
+          "We Love and Care, They Flourish"
+        </p>
+      </div>
+
+      <!-- Countdown -->
+      <div
+        id="countdowning"
+        class="text-3xl text-yellow-400 font-mono bg-gray-800 p-6 rounded-lg shadow-lg w-60 object-center"
+      >
+        <span id="days">00</span>:<span id="hours">00</span>:<span id="minutes"
+          >00</span
+        >:<span id="seconds">00</span>
+      </div>
+    </section>
+
+    <!-- ABOUT US -->
+    <main class="flex flex-col items-center justify-center min-h-screen">
+      <h1 class="text-4xl text-yellow-500 font-bold mb-5">About Us</h1>
+      <article
+        class="flex flex-col items-center justify-center md:flex-row w-4/5"
+      >
+        <img
+          src="./assets/about us .jpg"
+          alt="Hand holding toys"
+          class="mb-5 md:w-1/2 bg-cover"
+        />
+        <p class="text-justify md:w-1/2 px-5">
+          For over a decade, Mother Goose Nursery and Daycare has been a
+          cornerstone of early childhood education and care in Ntinda, Uganda.
+          We have earned a trusted reputation for nurturing young minds in a
+          warm and stimulating environment.
+          <br />As part of our journey, we are excited to expand our vision and
+          reach to Kira Kasangati with the launch of Sandy Castle Playground.
+          This new venture is not just an extension but a reimagining of our
+          commitment to creating spaces where children can explore and thrive.
+          Sandy Castle Playground reflects our dedication to innovation, with
+          enhanced facilities designed for both learning and fun. <br />We aim
+          to continue fostering a community that prioritizes the well-being and
+          potential of every child. With our experienced team and enriched
+          curriculum, we are here to support families and inspire the next
+          generation of learners and leaders. Welcome to a new chapter in early
+          childhood excellence!
+        </p>
+      </article>
+    </main>
+
+    <!-- SPEAKERS SECTION-->
+    <section
+      class="speakers flex flex-col items-center justify-center py-10 px-10 bg-fixed bg-cover"
+      style="background-image: url(./assets/background3.jpg)"
+    >
+      <h1 class="text-4xl text-yellow-500 font-bold mb-5">SPEAKERS</h1>
+      <div class="speaker-container flex flex-col border gap-10 md:flex-row">
+        <div class="speaker__card bg-gray-300 flex flex-col">
+          <img src="./assets/profile1.jpg" alt="speaker-one" />
+          <h1 class="text-2xl font-bold text-red-600 px-5 mt-5">
+            SANDRINA LOUISE
+          </h1>
+          <h2 class="text-xl font-bold text-red-400 px-5">DIRECTOR</h2>
+          <p class="py-5 px-5">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi sed,
+            corrupti aliquid itaque ullam eligendi?
+          </p>
+        </div>
+
+        <div class="speaker__card bg-gray-300 flex flex-col">
+          <img src="./assets/profile2.jpg" alt="speaker-two" />
+          <h1 class="text-2xl font-bold text-red-600 px-5 mt-5">
+            BRIAN MUWONGE
+          </h1>
+          <h2 class="text-xl font-bold text-red-400 px-5">DIRECTOR</h2>
+          <p class="py-5 px-5">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi sed,
+            corrupti aliquid itaque ullam eligendi?
+          </p>
+        </div>
+
+        <div class="speaker__card bg-gray-300 flex flex-col">
+          <img src="./assets/profile3.jpg" alt="speaker-three" />
+          <h1 class="text-2xl font-bold text-red-600 px-5 mt-5">
+            JOHN KISSINGER
+          </h1>
+          <h2 class="text-xl font-bold text-red-400 px-5">DIRECTOR</h2>
+          <p class="py-5 px-5">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi sed,
+            corrupti aliquid itaque ullam eligendi?
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCHEDULE AND RSVP -->
+    <div class="flex items-center justify-center min-h-screen">
+      <section
+        class="schedule-rsvp flex gap-20 w-4/5 items-start justify-center bg-gray-100 py-20 rounded-lg"
+      >
+        <div class="schedule leading-loose">
+          <h2 class="text-4xl text-yellow-500 font-bold mb-2">Program</h2>
+          <div class="morning-program">
+            <h3 class="font-bold">Morning Session</h3>
+            <ol>
+              <li><strong>10:00 AM</strong> - Welcome Speech</li>
+              <li><strong>10:30 AM</strong> - Guided Tour</li>
+              <li><strong>11:30 AM</strong> - Meet the Caretakers</li>
+            </ol>
+          </div>
+
+          <div class="afternoon-program mt-10">
+            <h3 class="font-bold">Afternoon Session</h3>
+            <ol>
+              <li><strong>1:00 PM</strong> - Keynote Presentation</li>
+              <li><strong>2:00 PM</strong> - Interactive Workshops</li>
+              <li><strong>3:30 PM</strong> - Closing Ceremony</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="rsvp">
+          <div class="rsvp-title">
+            <h1 class="text-4xl text-yellow-500 font-bold mb-2">RSVP</h1>
+            <p class="text-1xl mb-5">
+              Confirm Your Attendance By Filling in this Form
+            </p>
+          </div>
+          <div class="rsvp-form bg-grey-300 rounded-lg bg-white py-5">
+            <form>
+              <div class="rsvp-name">
+                <label for="name" class="font-bold">Your Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  required
+                  class="border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-5 w-full"
+                  placeholder="Enter your full name"
+                />
+              </div>
+              <div class="rsvp-email">
+                <label for="email" class="font-bold">Your Email</label>
+                <input
+                  type="email "
+                  id="email"
+                  required
+                  class="border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-5 w-full"
+                  placeholder="Enter your Email"
+                />
+              </div>
+              <div class="rsvp-guests">
+                <label for="guests" class="font-bold">Number Of Guests</label>
+                <input
+                  type="number "
+                  id="guests"
+                  required
+                  class="border rounded-md focus:outline-none focus:ring-2 focus:ring-red-500 mb-5 w-full"
+                  placeholder="Number of Guests"
+                />
+              </div>
+              <button
+                class="rsvp-button text-2xl bg-red-700 text-white px-3 rounded-md hover:bg-green-700"
+              >
+                RSVP
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <section class="py-8 bg-yellow-500 text-white text-center h-52">
+      <h2 class="text-3xl font-bold mb-4">Ready to Join Us?</h2>
+      <p class="mb-6">
+        Register now to secure your Child's spot at Sandy Castle!
+      </p>
+      <a
+        href="#register"
+        class="px-6 py-3 bg-white text-red-500 hover:bg-gray-100 rounded-full text-lg font-semibold"
+        >Register Now</a
+      >
+    </section>
+    <footer class="py-8 bg-gray-800 text-gray-400 text-center h-20">
+      <p>&copy; 2024 Sandy Castle Playground. All rights reserved.</p>
+    </footer>
+    <script src="./script.js"></script>
   </body>
 </html>

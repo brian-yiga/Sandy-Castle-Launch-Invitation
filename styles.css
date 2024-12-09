@@ -1,79 +1,8 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; 
-}
-section {
-    position: relative;
-    height: 100vh;
-}
-header {
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10; 
-    background-color: white; 
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-main {
-    padding-top: 4rem; 
+body {
+  overflow-x: hidden;
 }
 
 h1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
-.Speaker-Container{
-    justify-items: center;
-    padding: 0 4.9rem;
-    border: 1px solid red;
-}
-
-.Speakers{
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
-}
-.Speaker{
-    
-    overflow: hidden;
-    border-radius: 1rem;
-    display: flex;
-    background-color: grey;
-
-}
-
-.Speaker h1{
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.Speaker h2 {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.content {
-    padding-right: 5%;
-    padding-left: 5%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-#countdowning {
-    z-index: 1000;
-    position: absolute;
-    top: 9em;
-    right: 9em;
-    display: flex;
-}
-
-span {
-    font-size: 25px;
-    color: rgb(160, 45, 0);
-}
-
-
