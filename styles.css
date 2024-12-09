@@ -25,19 +25,55 @@ main {
 h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.Speaker-Container{
+    justify-items: center;
+    padding: 0 4.9rem;
+    border: 1px solid red;
+}
 
-.speaker__card h1 {
+.Speakers{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.Speaker{
+    
+    overflow: hidden;
+    border-radius: 1rem;
+    display: flex;
+    background-color: grey;
+
+}
+
+.Speaker h1{
     font-size: 25px;
     font-weight: bold;
 }
 
-.speaker__card h2 {
+.Speaker h2 {
     font-size: 18px;
     font-weight: bold;
+}
+
+.content {
+    padding-right: 5%;
+    padding-left: 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#countdowning {
+    z-index: 1000;
+    position: absolute;
+    top: 9em;
+    right: 9em;
+    display: flex;
 }
 
 span {
     font-size: 25px;
     color: rgb(160, 45, 0);
 }
+
 
